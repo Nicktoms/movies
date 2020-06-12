@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Top Movies</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Top Movies List</h1>
+    <p><% for (i=0; i < peliculas.length; i++){ %>
+      <li>
+        <a href="/<%= peliculas[i].id %>"><%= peliculas[i].title %></a>
+      </li>
+    </p>
+    <% } %>
+  </body>
+</html>
