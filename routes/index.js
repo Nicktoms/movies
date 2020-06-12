@@ -4,5 +4,6 @@ const moviesController = require('../controllers/moviesController')
 
 /* GET home page. */
 router.get('/', moviesController.list);
+router.get('/:id', moviesController.detail);
 
 module.exports = router;
