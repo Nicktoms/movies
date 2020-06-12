@@ -8,7 +8,7 @@
     <h1>Movies list</h1>
     <p><% for (i=0; i < peliculas.length; i++){ %>
       <li>
-        <%= peliculas[i].title %>
+        <a href="/<%= peliculas[i].id %>"><%= peliculas[i].title %></a>
       </li>
     </p>
     <% } %>
