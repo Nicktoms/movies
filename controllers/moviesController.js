@@ -37,11 +37,21 @@ let moviesController = {
         db.Movies.findAll({
             where: {
                 rating: { [db.Sequelize.Op.gt]: 8 }
-            }
+            },
+            order: [
+                ['rating', 'DESC']
+            ],
+            limit: 5
         })
             .then(function (peliculas) {
                 res.render("top",
                     { peliculas });
+            })
+    },
+    totalTime: function (req,res) {
+        db.Peliculas.sum('length')
+            .then(function(resultado){
+                console.log(resultado)
             })
     }
 };
